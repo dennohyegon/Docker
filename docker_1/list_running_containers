@@ -1,0 +1,12 @@
+#!bin/bash
+docker ps
+docker run -d jpetazzo/clock
+docker run -d jpetazzo/clock
+docker ps -l
+docker ps -lq
+//View the logs of a container
+docker logs 
+//We specified a prefix of the full container ID.
+//You can, of course, specify the full ID.
+//The logs command will output the entire logs of the container.
+
