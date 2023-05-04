@@ -1,0 +1,16 @@
+#!/bin/bash
+Setting up our container
+$ docker run -it ubuntu
+Inspect the changes
+$ docker diff <yourContainerId>
+Commit our changes into a new image
+$ docker commit <yourContainerId>
+The output of the docker commit command will be the ID for your newly created image. use it as an argument to docker run.
+Testing our new image
+$ docker run -it <newImageId>
+Tagging images
+Referring to an image by its ID is not convenient
+$ docker tag <newImageId> figlet.
+But we can also specify the tag as an extra argument to commit. 
+$ docker commit <containerId> figlet
+$ docker run -it figlet
