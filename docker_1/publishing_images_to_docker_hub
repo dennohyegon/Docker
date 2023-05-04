@@ -1,0 +1,7 @@
+#!/bin/bash
+create an account at hub.docker.com
+docker login
+Docker images tags are like Git tags and branches.
+Tagging an image doesn't rename an image: it adds another tag.
+docker tag figlet jpetazzo/figlet
+docker push jpetazzo/figlet
