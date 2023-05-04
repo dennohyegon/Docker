@@ -1,0 +1,14 @@
+#!/bin/bash
+docker run busybox echo hello world
+docker run -it ubuntu
+This is a brand new container.
+
+It runs a bare-bones, no-frills ubuntu system.
+
+-it is shorthand for -i -t.
+
+-i tells Docker to connect us to the container's stdin.
+
+-t tells Docker that we want a pseudo-terminal.
+Starting another container
+docker run -it ubuntu
