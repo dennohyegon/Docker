@@ -1,0 +1,47 @@
+#!/bin/bash
+Image = files + metadata
+
+These files form the root filesystem of our container.
+
+The metadata can indicate a number of things, e.g.:
+
+the author of the image
+the command to execute in the container when starting it
+environment variables to be set
+etc.
+Images are made of layers, conceptually stacked on top of each other.
+
+Each layer can add, change, and remove files and/or metadata.
+
+Images can share layers to optimize disk usage, transfer times, and memory use.
+An image is a read-only filesystem.
+
+A container is an encapsulated set of processes running in a read-write copy of that filesystem.
+
+To optimize container boot time, copy-on-write is used instead of regular copy.
+
+docker run starts a container from a given image
+docker images
+docker search jenkins
+There are two ways to download images.
+
+Explicitly, with docker pull.
+
+Implicitly, when executing docker run and the image is not found locally.
+$ docker pull debian:jessie
+images can have tags
+docker pull ubuntu:latest
+Images can be stored:
+
+On your Docker host.
+In a Docker registry.
+You can use the Docker client to download (pull) or upload (push) images.
+The root namespace is for official images. They are put there by Docker Inc., but they are generally authored and maintained by third parties.
+
+Those images include:
+
+Small, "swiss-army-knife" images like busybox.
+
+Distro images to be used as bases for your builds, like ubuntu, fedora...
+
+Ready-to-use components and services, like redis, postgresql
