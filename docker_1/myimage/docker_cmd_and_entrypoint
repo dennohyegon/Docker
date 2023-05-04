@@ -1,0 +1,8 @@
+#!/bin/bash
+Dockerfile will look like this
+FROM ubuntu
+RUN apt-get update
+RUN ["apt-get", "install", "figlet"]
+CMD figlet -f script hello
+CMD defines a default command to run when none is given.
+ENTRYPOINT defines a base command (and its parameters) for the container.
